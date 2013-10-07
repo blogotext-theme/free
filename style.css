@@ -36,6 +36,8 @@ a:hover {
 	text-decoration: underline;
 }
 
+p { margin: 0 0 15px 0; text-align: justify;}
+
 /* for accessibility */
 input[type="text"], input[type="url"], input[type="search"], input[type="email"], textarea {
 	background-color: white !important;
@@ -53,13 +55,13 @@ header.titre a {
 /* LAYOUT -------------------------------------------------------- */
 
 #top {
-	padding: 0px;
+	padding: 0;
 	color: #f44;
 }
 
 #top h1 {
 	padding-right: 30px;
-	text-shadow: 0px 0px 4px #aaa;
+	text-shadow: 0 0 4px #aaa;
 	letter-spacing: -3px;
 	font-size: 3.5em;
 	font-style: italic;
@@ -88,8 +90,9 @@ header.titre a {
 
 #wrapper {
 	background-color: #fff;
-	box-shadow: 0px 0px 3px #aaa;
+	box-shadow: 0 0 3px #aaa;
 	border: 1px solid #ccc;
+	border-radius: 5px;
 	padding: 50px;
 }
 
@@ -124,6 +127,9 @@ h3.date {
 }
 
 /* article de blog */
+article {
+	clear: both;
+}
 .news, .comment, .lien {
 	word-wrap: break-word;
 	overflow: show;
@@ -135,6 +141,23 @@ h3.date {
 
 .news h3, .lien h3 {
 	font-size: 1em;
+}
+
+.news img, .news iframe {
+	max-width: 100%;
+}
+
+.news figure {
+	display:block;
+	float: right;
+	margin: 5px 0 5px 10px;
+	padding:10px;
+	text-align: center;
+}
+
+.news figcaption {
+	font-size: 9px;
+	font-style: italic;
 }
 
 .permalien {
@@ -274,15 +297,15 @@ p.formatbut {
 	border-right: 1px solid #fafafa
 }
 
-#pmm span      { background: no-repeat -4px -142px url(format.png); }
-#pmp span      { background: no-repeat -4px -162px url(format.png); }
-#button01 span { background: no-repeat -4px   -1px url(format.png); }
-#button02 span { background: no-repeat -4px  -21px url(format.png); }
-#button03 span { background: no-repeat -4px  -42px url(format.png); }
-#button04 span { background: no-repeat -4px  -82px url(format.png); }
-#button09 span { background: no-repeat -4px  -62px url(format.png); }
-#button10 span { background: no-repeat -4px -102px url(format.png); }
-#button12 span { background: no-repeat -4px -122px url(format.png); }
+#pmm span      { background: no-repeat -4px -142px url(images/format.png); }
+#pmp span      { background: no-repeat -4px -162px url(images/format.png); }
+#button01 span { background: no-repeat -4px   -1px url(images/format.png); }
+#button02 span { background: no-repeat -4px  -21px url(images/format.png); }
+#button03 span { background: no-repeat -4px  -42px url(images/format.png); }
+#button04 span { background: no-repeat -4px  -82px url(images/format.png); }
+#button09 span { background: no-repeat -4px  -62px url(images/format.png); }
+#button10 span { background: no-repeat -4px -102px url(images/format.png); }
+#button12 span { background: no-repeat -4px -122px url(images/format.png); }
 
 #erreurs {
 	color: red;
@@ -314,7 +337,7 @@ p.formatbut {
 }
 
 #input-rechercher { /* submit*/
-	padding: 2px 0px;
+	padding: 2px 0;
 	border-radius: 0 4px 4px 0;
 	background: #f0f0f0;
 	border-width: 0;
@@ -347,7 +370,7 @@ blockquote, q {
 }
 
 .tags {
-	padding : 7px 0px;
+	padding : 7px 0;
 	text-align: right;
 	margin-top: 10px;
 }
@@ -368,6 +391,8 @@ blockquote, q {
 	padding: 30px;
 }
 
+#email-adress { display: none!important;}
+
 @media (max-width: 799px) {
 	body {
 		padding: 0 5px 15px;
@@ -375,5 +400,8 @@ blockquote, q {
 	#wrapper {
 		padding: 20px;
 	}
+	#top h1, #top h2 {
+		height: 30px;
+		line-height: 50px;	
+	}
 }
-
